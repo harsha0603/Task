@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Monitoring Dashboard</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;  /* Darker green for header */
+            color: white;
+            padding: 20px;
+            font-size: 1.6rem;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box:hover {
+            background-color: #e6f4e6;  /* Light green on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .box h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #333;
+        }
+
+        .box p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    PDF Monitoring Dashboard
+</header>
+
+<h1>Welcome, User!</h1>
+
+<div class="container">
+    <div class="box" onclick="window.location.href='{{ url_for('monitor_url', url_id=0) }}'">
+        <h3>Criminal Court Forms</h3>
+        <p>Track the criminal court PDF forms for any updates.</p>
+    </div>
+
+    <div class="box" onclick="window.location.href='{{ url_for('monitor_url', url_id=1) }}'">
+        <h3>Prov Family Forms</h3>
+        <p>Monitor the latest provincial family forms here.</p>
+    </div>
+
+    <div class="box" onclick="window.location.href='{{ url_for('monitor_url', url_id=2) }}'">
+        <h3>Federal Contraventions VT Forms</h3>
+        <p>Stay updated with the federal contravention forms.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 PDF Monitoring Service. All rights reserved.</p>
+</div>
+
+</body>
+</html>
