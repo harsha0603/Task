@@ -16,6 +16,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2  # Checks out the repository code
 
+    - name: List files
+      run: |
+        ls -la  # List the files in the repository to confirm Dockerfile presence
+
     - name: Log in to DockerHub
       uses: docker/login-action@v2  # Logs in to DockerHub using credentials
       with:
