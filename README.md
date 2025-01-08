@@ -120,7 +120,8 @@ Add secrets to your GitHub repository:
 
 Navigate to Settings > Secrets and variables > Actions.
 Add the following secrets:
-```bash DOCKER_USERNAME: Your DockerHub username.
+```bash
+DOCKER_USERNAME: Your DockerHub username.
 DOCKER_PASSWORD: Your DockerHub password.
 ```
 The GitHub Actions workflow file is located at .github/workflows/docker-build.yml.
@@ -130,4 +131,24 @@ The GitHub Actions workflow file is located at .github/workflows/docker-build.ym
 2. Login to DockerHub: Logs into DockerHub using the provided secrets.
 3. Build and Push Docker Image: Builds the Docker image and pushes it to DockerHub.
 4. The workflow is triggered on every push or pull request to the main branch.
+
+# Docker run
+![Screenshot 2025-01-08 093928](https://github.com/user-attachments/assets/12a69b76-cdf1-4dac-8e2f-7fa94a3230fb)
+
+# Dashboard
+![image](https://github.com/user-attachments/assets/5c0d5101-c8a9-4c07-9d9d-065ac482a8a4)
+
+# Minitering of Ecah Website (for example criminal court fourms)
+This page displays a list of all the scraped PDFs from the specified URL, along with their metadata, such as the last modified date. Each PDF is available for download.
+![image](https://github.com/user-attachments/assets/4e4bc053-5c2f-4756-87ae-78e3a7df06f2) 
+
+# Manual Triggering option is given so that user can detect new/updated pdf from that url
+![image](https://github.com/user-attachments/assets/99255aa7-e6e9-43dc-b92c-7b5793c7be76)
+
+
+# If there are no new/updated pdfs detected 
+![image](https://github.com/user-attachments/assets/013e3cda-bb45-4250-9656-eaad6d73b545)
+
+
+
 
