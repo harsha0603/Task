@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 # Azure Blob Storage setup
 connection_string = "AZURE_BLOB_CONNECTION_STRING"
 container_name = "AZURE_BLOB_CONTAINER"
-blob_service_client = BlobServiceClient.from_connection_string("DefaultEndpointsProtocol=https;AccountName=pdfmonitoring12345;AccountKey=96tJz6oG79dLlGM6rM7b9DI/UMQm1oeXw8uTyR27z9wUVNYzZykQhj90LNbuiPbpsa0ATMSruD1Q+AStAcEUYg==;EndpointSuffix=core.windows.net")
+blob_service_client = BlobServiceClient.from_connection_string("connection_string")
 container_client = blob_service_client.get_container_client(container_name)
 
 load_dotenv()
